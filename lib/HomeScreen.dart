@@ -82,31 +82,33 @@ class HomeScreen extends StatelessWidget {
                   Expanded(
                     child: Container(
                       padding: EdgeInsets.symmetric(horizontal: 64),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text("Easy Approach", style: TextStyle(fontSize: kIsWeb ? 64 : 32, fontWeight: FontWeight.w700, color: Colors.lightBlue),),
-                          SizedBox(height: 8,),
-                          Text("Easy Approach makes it easy for every one to dessiminate knowledge, and making "
-                              "difficult problems easy to solve", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w300, letterSpacing: 1.0, color: Colors.grey[800]),),
-                          SizedBox(height: 16,),
-                          
-                          FlatButton.icon(
-                              onPressed: (){
-                                Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) => VideoScreen()
-                                ));
-                              },
-                              icon: Icon(Icons.video_library), 
-                              label: Text("See all Videos"),
-                            color: Colors.grey[800],
-                            textColor: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.all(Radius.circular(32))
-                            ),
-                          )
-                        ],
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text("Easy Approach", style: TextStyle(fontSize: kIsWeb ? 64 : 32, fontWeight: FontWeight.w700, color: Colors.lightBlue),),
+                            SizedBox(height: 8,),
+                            Text("Easy Approach makes it easy for every one to dessiminate knowledge, and making "
+                                "difficult problems easy to solve", style: TextStyle(fontSize: 15, fontWeight: FontWeight.w300, letterSpacing: 1.0, color: Colors.grey[800]),),
+                            SizedBox(height: 16,),
+
+                            FlatButton.icon(
+                                onPressed: (){
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => VideoScreen()
+                                  ));
+                                },
+                                icon: Icon(Icons.video_library),
+                                label: Text("See all Videos"),
+                              color: Colors.grey[800],
+                              textColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.all(Radius.circular(32))
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   )
